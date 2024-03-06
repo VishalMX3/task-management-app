@@ -1,9 +1,12 @@
 import express, { Request, Response } from "express"
 import connectToDatabse from "./db"
+import dotenv from "dotenv";
 
 const application = express()
 
 const PORT = 1337
+
+dotenv.config();
 
 connectToDatabse();
 
