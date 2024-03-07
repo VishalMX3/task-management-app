@@ -2,6 +2,8 @@ import express from "express"
 import {
  
     createTask,
+    deleteTask,
+  editTask,
   getAllTasks,
   toggleTaskStatus,
   getAllCompletedTasks,
@@ -19,5 +21,7 @@ taskRoutes.route("/create").post(createTask)
 taskRoutes.route("/update/:id").put(toggleTaskStatus)
 taskRoutes.route("/completed").get(getAllCompletedTasks)
 taskRoutes.route("/today").get(getTasksForToday)
+taskRoutes.route("/:id").delete(deleteTask)
+taskRoutes.route("/edit/:id").put(editTask)
 
 export default taskRoutes
