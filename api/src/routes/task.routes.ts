@@ -3,6 +3,7 @@ import {
  
     createTask,
   getAllTasks,
+  toggleTaskStatus,
  
 } from "../controllers/task.controller"
 import { authenticationMiddleware } from "../middleware"
@@ -13,5 +14,6 @@ taskRoutes.use(authenticationMiddleware)
 
 taskRoutes.route("/").get(getAllTasks)
 taskRoutes.route("/create").post(createTask)
+taskRoutes.route("/update/:id").put(toggleTaskStatus)
 
 export default taskRoutes
