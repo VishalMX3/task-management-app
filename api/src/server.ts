@@ -2,6 +2,7 @@ import express, { Request, Response } from "express"
 import connectToDatabse from "./db"
 import dotenv from "dotenv";
 import userRoutes from "./routes/user.routes";
+import taskRoutes from "./routes/task.routes";
 
 const application = express()
 
@@ -17,7 +18,8 @@ application.get("/ping", (request: Request, response: Response) => {
     response.send("Pong")
 })
 
-application.use("/user", userRoutes)
+application.use("/users", userRoutes)
+application.use("/tasks", taskRoutes)
 
 application.listen(PORT, () => {
     console.log("Server is up and running on 1337")
