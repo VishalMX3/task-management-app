@@ -76,3 +76,24 @@ export const createTask = async (request: AuthRequest, response: Response) => {
       throw error
     }
   }
+
+  export const getTasksForToday = async (
+    request: AuthRequest,
+    response: Response
+  ) => {
+    try {
+      const userId = request.user
+      const todaysISODate = new Date()
+      todaysISODate.setHours(0, 0, 0, 0)
+      console.log(todaysISODate.toISOString())
+      const tasks = await Task.find({
+        user: userId,
+        date: todaysISODate.toISOString(),
+      })
+      response.send(tasks)
+    } catch (error) {
+      console.log("error in getTasksForToday", error)
+      response.send({ error: "Error while fetching tasks" })
+      throw error
+    }
+  }
