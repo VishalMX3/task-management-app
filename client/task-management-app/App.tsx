@@ -8,7 +8,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <View style={styles.container}>
-        <Text variant="text3Xl">Hey!</Text>
+        <Text variant="text3Xl">Hey!! Whatssup</Text>
         <Button />
         <StatusBar style="auto" />
       </View>
