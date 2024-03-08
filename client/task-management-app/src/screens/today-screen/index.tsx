@@ -2,14 +2,14 @@ import SafeAreaWrapper from "@/components/shared/safe-area-wrapper";
 import { Box, Text } from "@/utils/theme";
 import React from "react";
 
-const HomeScreen = () => {
+const TodayScreen = () => {
   return (
     <SafeAreaWrapper>
       <Box>
-        <Text>Home Screen!</Text>
+        <Text>Today Screen!</Text>
       </Box>
     </SafeAreaWrapper>
   );
 };
 
-export default HomeScreen;
+export default TodayScreen;
