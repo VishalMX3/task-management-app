@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
-import Button from "./src/components/button";
+import Button from "./src/components/shared/button";
 import { ThemeProvider } from "@shopify/restyle";
 import theme, { Text } from "@/utils/theme";
 import Navigation from "@/navigation";
