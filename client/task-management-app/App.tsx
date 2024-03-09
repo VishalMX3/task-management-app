@@ -1,11 +1,8 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
-import Button from "./src/components/shared/button";
-import { ThemeProvider } from "@shopify/restyle";
-import theme, { Text } from "@/utils/theme";
 import Navigation from "@/navigation";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import theme from "@/utils/theme";
+import { ThemeProvider } from "@shopify/restyle";
 import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
   return (
